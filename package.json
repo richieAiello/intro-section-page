@@ -1,0 +1,26 @@
+{
+  "name": "intro-section-page",
+  "version": "1.0.0",
+  "description": "[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.",
+  "source": "./src/index.html",
+  "scripts": {
+    "dev": "parcel",
+    "build": "parcel build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/richieAiello/intro-section-page.git"
+  },
+  "keywords": [],
+  "author": "Richard Aiello",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/richieAiello/intro-section-page/issues"
+  },
+  "homepage": "https://github.com/richieAiello/intro-section-page#readme",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.5.0",
+    "parcel": "^2.5.0",
+    "sass": "^1.51.0"
+  }
+}
