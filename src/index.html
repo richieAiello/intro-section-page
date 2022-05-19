@@ -26,8 +26,9 @@
         <span class="hamburger hamburger--bottom"></span>
       </button>
 
+      <!-- Revealed with hamburger button. Mobile feature. -->
+      <div class="nav__shadow hidden" aria-hidden="true"></div>
       <!-- Hidden on mobile, and revealed with hamburger button. Displayed on tablet and desktop. -->
-      <!-- Either wrap in another div for module view or try the ::before pseudo selector. -->
       <div class="nav__menu hidden">
         <ul class="nav__list">
           <li class="nav__item">
@@ -37,7 +38,7 @@
             </button>
 
             <!-- Hidden. Revealed on button click. -->
-            <ul class="nav__list--secondary">
+            <ul class="nav__list--secondary hidden">
               <li class="nav__item--secondary">
                 <a href="#" class="nav__link link">
                   <img src="./images/icon-todo.svg" alt="" class="nav__icon">
@@ -71,7 +72,7 @@
             </button>
 
             <!-- Hidden. Revealed on button click. -->
-            <ul class="nav__list--secondary">
+            <ul class="nav__list--secondary hidden">
               <li class="nav__item--secondary">
                 <a href="#" class="nav__link link">History</a>
               </li>
@@ -92,8 +93,8 @@
         </ul>
 
         <div class="nav__wrapper">
-          <a href="#" class="btn btn--login link">Login</a>
-          <a href="#" class="btn btn--register link">Register</a>
+          <a href="#" class="btn btn--login btn--nav link">Login</a>
+          <a href="#" class="btn btn--register btn--nav link">Register</a>
         </div>
       </div>
     </nav>
@@ -116,7 +117,11 @@
         <img src="./images/client-maker.svg" alt="Maker company logo." class="main__icon">
       </div>
     </section> 
-    <img src="./images/image-hero-mobile.png" alt="A remote worker focused on a laptop." class="image image--hero">
+
+    <!-- Displayed on mobile. -->
+    <img src="./images/image-hero-mobile.png" alt="A remote worker focused on a laptop." class="image image--hero image--mobile">
+    <!-- Displayed on larger screens. -->
+    <img src="./images/image-hero-desktop.png" alt="A remote worker focused on a laptop." class="imge image--hero image--desktop">
   </main>
 </body>
 </html>

@@ -1,3 +1,321 @@
+/**********************************
+  VARIABLES
+**********************************/
+$black: #151515;
+$grey: #686868;
+$white: #FFFFFF; 
+
+/**********************************
+  RESET AND SCROLLBAR
+**********************************/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/**********************************
+  BASE STYLES
+**********************************/
 .body {
   font-family: 'Epilogue', sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.625rem;
+}
+
+.container {
+  width: min(100% - 2rem, 1360px);
+  margin-inline: auto;
+}
+
+.btn {
+  display: inline-block;
+  background-color: initial;
+  border: initial;
+  font-family: inherit;
+  font-size: initial;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.btn,
+.link {
+  color: inherit;
+  transition: all 400ms;
+}
+
+.image {
+  object-fit: cover;
+
+  &--hero {
+    width: min(100%, 450px);
+    margin-inline: auto;
+  }
+
+  &--desktop {
+    display: none;
+  }
+}
+
+// Place at bottom of base styles to ensure style works when applied.
+.hidden {
+  display: none;
+}
+
+/**********************************
+  HEADER
+**********************************/
+.header {
+  height: 51px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: $white;
+}
+
+.nav {
+  background-color: $white;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+
+  &__shadow,
+  &__menu {
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+  }
+
+  &__shadow {
+    width: 100%;
+    z-index: 1;
+    background-color: rgba($black, 75%);
+  }
+
+  &__menu {
+    width: min(100%, 240px);
+    padding-left: 1.5rem;
+    padding-right: 1.3125rem;
+    overflow-y: scroll;
+    background-color: $white;
+    color: $grey;
+    z-index: 2;
+  }
+
+  &__list {
+    list-style: none;
+    margin-top: 4.875rem;
+
+    &--secondary {
+      list-style: none;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  &__item {
+    margin-bottom: 1rem;
+
+    &:last-of-type {
+      margin-bottom: 2rem;
+    }
+    
+    &--secondary {
+      margin-bottom: 1rem;
+      margin-left: 1.5rem;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__link {
+    &:hover,
+    &:focus {
+      color: $black;
+    }
+  }
+
+  &__icon {
+    margin-right: 14px;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+// Absolutely positioned to btn--hamburger.
+// When toggling nav menu swap hamburger button to position fixed
+.hamburger {
+  background-color: $black;
+  width: 20px;
+  height: 2px;
+  border-radius: 1rem;
+  transition: all 500ms;
+  position: absolute;
+  left: 0;
+
+  &--top {
+    top: 3px;
+  }
+
+  &--bottom {
+    bottom: 3px;
+  }
+}
+
+// Toggled on click for .hamburger--top
+.flip-top {
+  top: 7px;
+  transform: rotate(-225deg);
+}
+
+// Toggled on click for .hamburger--bottom
+.flip-bottom {
+  bottom: 7px;
+  transform: rotate(-315deg);
+}
+
+/**********************************
+  MAIN
+**********************************/
+.main {
+  display: flex;
+  flex-direction: column;
+  margin-top: 75px;
+
+  &__context {
+    order: 2;
+    margin-top: 3rem;
+    padding: 0 1rem;
+    text-align: center;
+  }
+
+  &__wrapper {
+  margin-bottom: 3rem;
+
+    &--icons {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+      row-gap: 1rem;
+    }    
+  }
+
+  &__heading {
+    font-weight: 700;
+    font-size: 2.25rem;
+    line-height: 2.625rem;
+    letter-spacing: -0.5px;
+    margin-bottom: 1rem;
+  }
+
+  &__text {
+    color: $grey;
+    max-width: 36ch;
+    margin-inline: auto; 
+    margin-bottom: 1.5rem;
+  }
+
+  &__icon {
+    justify-self: center;
+  }
+
+  @media (min-width: 435px) {
+    &__wrapper--icons {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: auto;
+      row-gap: unset;
+    }    
+  }
+}
+
+/**********************************
+  BUTTONS
+**********************************/
+.btn {
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+  }
+
+  &--hamburger {
+    height: 1rem;
+    width: 1.25rem;
+    position: relative;
+    z-index: 3;
+
+    &:hover,
+    &:focus {
+      .hamburger {
+        background-color: $grey;
+      }
+    }
+  }
+
+  &--nav {
+    .arrow {
+      margin-left: 1rem;
+    }
+
+    &:hover,
+    &:focus {
+      color: $black;
+      border-color: $black;
+    }
+  } 
+
+  &--features {
+
+  }
+
+  &--company {
+
+  }
+
+  &--login,
+  &--register {
+    text-align: center;
+    font-size: 0.875rem;
+    line-height: 1rem;
+  }
+
+  &--login {
+    margin-bottom: 1rem;
+  }
+
+  &--register {
+    padding: 0.8125rem 0;
+    width: min(100%, 195px);
+    border: 2px solid $grey;
+    border-radius: 0.875rem;
+  }
+
+  &--main {
+    font-weight: 700;
+    color: $white;
+    background-color: $black;
+    letter-spacing: -0.22px;
+    border: 2px solid $black;
+    border-radius: 0.9375rem;
+    padding: 0.625rem 1.125rem 0.5rem 1.375rem;
+
+    &:hover,
+    &:focus {
+      color: $black;
+      background-color: $white;
+    }
+  }
 }
