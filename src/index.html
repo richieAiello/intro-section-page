@@ -5,11 +5,103 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap" rel="stylesheet">
   
+  <link rel="stylesheet" href="./main.scss">
+  <script type="module" src="./index.js"></script>
+
   <title>Intro Section Page</title>
 </head>
-<body>
+<body class="body">
+  <header class="hero">
+    <nav class="nav container">
+      <img src="./images/logo.svg" alt="Snap company logo" class="logo">
 
+      <!-- Hidden on tablet and desktop  -->
+      <button type="button" aria-label="Open and close navigation menu." class="btn btn--hamburger">
+        <span class="hamburger hamburger--top"></span>
+        <span class="hamburger hamburger--bottom"></span>
+      </button>
+
+      <!-- Hidden on mobile, and revealed with hamburger button. Displayed on tablet and desktop. -->
+      <!-- Either wrap in another div for module view or try the ::before pseudo selector. -->
+      <div class="nav__menu hidden">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <button type="button" class="btn btn--features btn--nav">
+              Features
+              <img src="./images/icon-arrow-up.svg" alt="" class="arrow">
+            </button>
+
+            <!-- Hidden. Revealed on button click. -->
+            <ul class="nav__list--secondary">
+              <li class="nav__item--secondary">
+                <a href="#" class="nav__link link">
+                  <img src="./images/icon-todo.svg" alt="" class="nav__icon">
+                  Todo List
+                </a>
+              </li>
+              <li class="nav__item--secondary">
+                <a href="#" class="nav__link link">
+                  <img src="./images/icon-calendar.svg" alt="" class="nav__icon">
+                  Calendar
+                </a>
+              </li>
+              <li class="nav__item--secondary">
+                <a href="#" class="nav__link link">
+                  <img src="./images/icon-reminders.svg" alt="" class="nav__icon">
+                  Reminders
+                </a>
+              </li>
+              <li class="nav__item--secondary">
+                <a href="#" class="nav__link link">
+                  <img src="./images/icon-planning.svg" alt="" class="nav__icon">
+                  Planning
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav__item">
+            <button type="button" class="btn btn--company btn--nav">
+              Company
+              <img src="./images/icon-arrow-up.svg" alt="" class="arrow">
+            </button>
+
+            <!-- Hidden. Revealed on button click. -->
+            <ul class="nav__list--secondary">
+              <li class="nav__item--secondary">
+                <a href="#" class="nav__link link">History</a>
+              </li>
+              <li class="nav__item--secondary">
+                <a href="#" class="nav__link link">Our Team</a>
+              </li>
+              <li class="nav__item--secondary">
+                <a href="#" class="nav__link link">Blog</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link link">Careers</a>
+          </li> 
+          <li class="nav__item">
+            <a href="#" class="nav__link link">Blog</a>
+          </li>
+        </ul>
+        
+        <div class="nav__wrapper">
+          <a href="#" class="btn btn--login link">Login</a>
+          <a href="#" class="btn btn--register link">Register</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="main">
+
+  </main>
+  <footer class="footer"></footer>
 </body>
 </html>
 
