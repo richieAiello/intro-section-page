@@ -3,6 +3,7 @@
 **********************************/
 $black: #000000;
 $grey: #686868;
+$white: #FFFFFF; 
 
 /**********************************
   RESET AND SCROLLBAR
@@ -34,11 +35,17 @@ $grey: #686868;
   display: inline-block;
   background-color: initial;
   border: initial;
+  font-family: inherit;
 }
 
 .link {
   text-decoration: none;
-  color: inherit;
+  color: initial;
+}
+
+.btn,
+.link {
+  transition: all 400ms;
 }
 
 .image {
@@ -91,6 +98,37 @@ $grey: #686868;
   }
 }
 
+// Absolutely positioned to btn--hamburger.
+.hamburger {
+  background-color: $black;
+  width: 20px;
+  height: 2px;
+  border-radius: 1rem;
+  transition: all 500ms;
+  position: absolute;
+  left: 0;
+
+  &--top {
+    top: 3px;
+  }
+
+  &--bottom {
+    bottom: 3px;
+  }
+}
+
+// Toggled on click for .hamburger--top
+.flip-top {
+  top: 7px;
+  transform: rotate(-225deg);
+}
+
+// Toggled on click for .hamburger--bottom
+.flip-bottom {
+  bottom: 7px;
+  transform: rotate(-315deg);
+}
+
 /**********************************
   MAIN
 **********************************/
@@ -124,8 +162,22 @@ $grey: #686868;
 **********************************/
 .btn {
 
-  &--hamburger {
+  &:hover,
+  &:focus {
+    cursor: pointer;
+  }
 
+  &--hamburger {
+    position: relative;
+    height: 1rem;
+    width: 1.25rem;
+
+    &:hover,
+    &:focus {
+      .hamburger {
+        background-color: $grey;
+      }
+    }
   }
 
   &--nav {
