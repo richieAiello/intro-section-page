@@ -1,3 +1,154 @@
+/**********************************
+  VARIABLES
+**********************************/
+$black: #000000;
+$grey: #686868;
+
+/**********************************
+  RESET AND SCROLLBAR
+**********************************/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/**********************************
+  BASE STYLES
+**********************************/
 .body {
+  min-height: 100vh;
   font-family: 'Epilogue', sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.container {
+  width: min(100% - 2rem, 1360px);
+  margin-inline: auto;
+}
+
+.btn {
+  display: inline-block;
+  background-color: initial;
+  border: initial;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.image {
+  max-width: 100%;
+  object-fit: cover;
+
+  &--hero {
+
+  }
+}
+
+// Place at bottom of base styles to ensure style works when applied.
+.hidden {
+  display: none;
+}
+
+/**********************************
+  NAV
+**********************************/
+.nav {
+
+  &__menu {
+
+  }
+
+  &__list {
+
+    &--secondary {
+
+    }
+  }
+
+  &__item {
+
+    &--secondary {
+      
+    }
+  }
+
+  &__link {
+
+  }
+
+  &__icon {
+
+  }
+
+  &__wrapper {
+
+  }
+}
+
+/**********************************
+  MAIN
+**********************************/
+.main {
+   &__context {
+
+   }
+
+   &__wrapper {
+
+    &--icons {
+
+    }    
+   }
+
+   &__heading {
+
+   }
+
+   &__text {
+
+   }
+
+   &__icon {
+
+   }
+}
+
+/**********************************
+  BUTTONS
+**********************************/
+.btn {
+
+  &--hamburger {
+
+  }
+
+  &--nav {
+
+  }
+
+  &--features {
+
+  }
+
+  &--company {
+
+  }
+
+  &--login {
+
+  }
+
+  &--register {
+
+  }
+
+  &--main {
+
+  }
 }
