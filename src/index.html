@@ -16,7 +16,7 @@
   <title>Intro Section Page</title>
 </head>
 <body class="body">
-  <header>
+  <header class="header">
     <nav class="nav container">
       <img src="./images/logo.svg" alt="Snap company logo" class="logo">
 
@@ -26,8 +26,9 @@
         <span class="hamburger hamburger--bottom"></span>
       </button>
 
+      <!-- Revealed with hamburger button. Mobile feature. -->
+      <div class="nav__shadow hidden" aria-hidden="true"></div>
       <!-- Hidden on mobile, and revealed with hamburger button. Displayed on tablet and desktop. -->
-      <!-- Either wrap in another div for module view or try the ::before pseudo selector. -->
       <div class="nav__menu hidden">
         <ul class="nav__list">
           <li class="nav__item">
