@@ -24,6 +24,14 @@ $white: #FFFFFF;
   font-weight: 500;
   font-size: 1rem;
   line-height: 1.625rem;
+
+  @media (min-width: 1200px) {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
 }
 
 .container {
@@ -60,6 +68,22 @@ $white: #FFFFFF;
   &--desktop {
     display: none;
   }
+
+  @media (min-width: 1200px) {
+    &--hero {
+      width: 480px;
+      height: 640px;
+      margin-inline: unset;
+    }
+
+    &--mobile {
+      display: none;
+    }
+
+    &--desktop {
+      display: block;
+    }
+  }
 }
 
 // Place at bottom of base styles to ensure style works when applied.
@@ -76,11 +100,6 @@ $white: #FFFFFF;
   position: fixed;
   top: 0;
   background-color: $white;
-
-  @media (min-width: 768px) {
-    height: initial;
-    position: unset;
-  }
 }
 
 .nav {
@@ -279,10 +298,10 @@ $white: #FFFFFF;
 .main {
   display: flex;
   flex-direction: column;
-  max-width: 1110px;
+  width: min(100%, 1180px);
   margin-inline: auto;
-  margin-top: 75px;
-  margin-bottom: 5.875rem;
+  padding-top: 4.6875rem;
+  padding-bottom: 5.875rem;
 
   &__context {
     order: 2;
@@ -299,6 +318,7 @@ $white: #FFFFFF;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: auto auto;
       row-gap: 1rem;
+      justify-items: center;
     }    
   }
 
@@ -317,21 +337,62 @@ $white: #FFFFFF;
     margin-bottom: 1.5rem;
   }
 
-  &__icon {
-    justify-self: center;
-  }
-
   @media (min-width: 435px) {
     &__wrapper--icons {
+      width: min(100%, 550px);
+      margin-inline: auto;
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: repeat(4, auto);
       grid-template-rows: auto;
       row-gap: unset;
     }    
   }
 
   @media (min-width: 768px) {
-    margin-top:4.5rem;
+    padding: 8.125rem 0;
+  }
+
+  @media (min-width: 1200px) {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-block: auto;
+
+    &__context {
+      order: unset;
+      margin-top: 6.5rem;
+      margin-left: 2.1875rem;
+      padding: 0;
+      text-align: left;
+    }
+  
+    &__wrapper {
+    margin-bottom: 6.75rem;
+    }
+
+    &__wrapper--icons {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 477.63px;
+      margin-inline: unset;
+    }    
+  
+    &__heading {
+      font-size: 5rem;
+      line-height: 5rem;
+      letter-spacing: -1.11px;
+      margin-bottom: 3rem;
+
+      .block {
+        display: block;
+      }
+    }
+  
+    &__text {
+      max-width: 42ch;
+      margin-inline: unset; 
+      margin-bottom: 3.1875rem;
+    }
   }
 }
 
@@ -432,6 +493,13 @@ $white: #FFFFFF;
     &--register {
       padding: 0.8125rem 1.375rem 0.8125rem 1.4375rem;
       width: initial;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    &--main {
+      letter-spacing: -0.25px;
+      padding: 0.9375rem 1.75rem 0.8125rem 1.9375rem;
     }
   }
 }
