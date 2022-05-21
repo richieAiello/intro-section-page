@@ -503,3 +503,58 @@ $white: #FFFFFF;
     }
   }
 }
+
+/**********************************
+  ANIMATIONS
+**********************************/
+@keyframes slide-in {
+  0% {
+    transform: translateX(-100vw);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-out {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100vw);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+  }
+}
+
+.slide-in {
+  animation: slide-in 500ms forwards;
+}
+
+.slide-out {
+  animation: slide-out 500ms forwards;
+}
+
+.fade-in {
+  animation: fade-in 500ms forwards;
+}
+
+.fade-out {
+  animation: fade-out 500ms forwards;
+}
