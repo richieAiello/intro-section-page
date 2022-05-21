@@ -86,6 +86,20 @@ $white: #FFFFFF;
   }
 }
 
+.arrow,
+.arrow__icon {
+  display: inline-block;
+  transition: all 400ms;
+}
+
+.arrow__icon {
+  transition: all 250ms;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
 // Place at bottom of base styles to ensure style works when applied.
 .hidden {
   display: none;
@@ -429,15 +443,11 @@ $white: #FFFFFF;
     &:focus {
       color: $black;
       border-color: $black;
+
+      .arrow__icon {
+        stroke: $black;
+      }
     }
-  } 
-
-  &--features {
-
-  }
-
-  &--company {
-
   }
 
   &--login,
@@ -502,4 +512,59 @@ $white: #FFFFFF;
       padding: 0.9375rem 1.75rem 0.8125rem 1.9375rem;
     }
   }
+}
+
+/**********************************
+  ANIMATIONS
+**********************************/
+@keyframes slide-in {
+  0% {
+    transform: translateX(-100vw);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-out {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100vw);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+  }
+}
+
+.slide-in {
+  animation: slide-in 500ms forwards;
+}
+
+.slide-out {
+  animation: slide-out 500ms forwards;
+}
+
+.fade-in {
+  animation: fade-in 500ms forwards;
+}
+
+.fade-out {
+  animation: fade-out 500ms forwards;
 }
