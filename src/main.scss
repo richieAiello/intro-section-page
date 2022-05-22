@@ -3,7 +3,7 @@
 **********************************/
 $black: #151515;
 $grey: #686868;
-$white: #FFFFFF; 
+$white: #FAFAFA;
 
 /**********************************
   RESET AND SCROLLBAR
@@ -45,6 +45,7 @@ $white: #FFFFFF;
   font-weight: 500;
   font-size: 1rem;
   line-height: 1.625rem;
+  background-color: $white;
 
   @media (min-width: 1200px) {
     display: flex;
@@ -145,16 +146,16 @@ $white: #FFFFFF;
   
   &__shadow,
   &__menu {
-    height: 100vh;
+    height: 100%;
     position: fixed;
-    bottom: 0;
     right: 0;
   }
 
   &__shadow {
     width: 100%;
-    z-index: 1;
     background-color: rgba($black, 75%);
+    z-index: 1;
+    bottom: 0;
   }
 
   &__menu {
@@ -164,6 +165,7 @@ $white: #FFFFFF;
     background-color: $white;
     color: $grey;
     z-index: 2;
+    top: 0;
   }
 
   &__list {
