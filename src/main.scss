@@ -119,7 +119,7 @@ $white: #FAFAFA;
 }
 
 .rotate {
-  transform: rotate(180deg);
+  transform: rotate(-180deg);
 }
 
 // Place at bottom of base styles to ensure style works when applied.
@@ -149,13 +149,13 @@ $white: #FAFAFA;
     height: 100%;
     position: fixed;
     right: 0;
+    bottom: 0;
   }
 
   &__shadow {
     width: 100%;
     background-color: rgba($black, 75%);
     z-index: 1;
-    bottom: 0;
   }
 
   &__menu {
@@ -165,7 +165,6 @@ $white: #FAFAFA;
     background-color: $white;
     color: $grey;
     z-index: 2;
-    top: 0;
   }
 
   &__list {
@@ -365,6 +364,7 @@ $white: #FAFAFA;
     line-height: 2.625rem;
     letter-spacing: -0.5px;
     margin-bottom: 1rem;
+    color: $black;
   }
 
   &__text {
